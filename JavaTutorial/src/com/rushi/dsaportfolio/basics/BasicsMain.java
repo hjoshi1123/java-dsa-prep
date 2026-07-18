@@ -10,10 +10,15 @@ public class BasicsMain {
     public static void executeAll(Scanner scanner) {
         List<DSAProblem> problems = new ArrayList<>();
         problems.add(new Fibonacci(scanner));
+        problems.add(new ArmstrongNumbers(scanner));
+        problems.add(new FindOccurrences(scanner));
+        problems.add(new IsPrime(scanner));
+        problems.add(new ReverseNumber(scanner));
 
         boolean exit = false;
         while(!exit) {
-            System.out.println("\nDSA basics dashboard");
+            System.out.println();
+            System.out.println("DSA basics dashboard");
             for (int i = 0; i < problems.size(); i++) {
                 System.out.printf("%d. %s\n", (i + 1), problems.get(i).getName());
             }
