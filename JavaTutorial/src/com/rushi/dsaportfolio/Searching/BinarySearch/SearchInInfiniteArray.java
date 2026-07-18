@@ -1,7 +1,16 @@
 package com.rushi.dsaportfolio.Searching.BinarySearch;
 
-public class SearchInInfiniteArray {
-    public static void main(String[] args) {
+import com.rushi.dsaportfolio.core.BaseProblem;
+
+import java.util.Scanner;
+
+public class SearchInInfiniteArray extends BaseProblem {
+    public SearchInInfiniteArray(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() {
         int[] arr = {1, 1, 2, 3, 5, 8, 12, 21, 27, 32, 38, 43, 54, 59, 61, 68, 75, 79, 80, 84, 91, 99};
         int target = 32;
         System.out.println(searchInInfiniteArray(arr, target));
@@ -24,5 +33,15 @@ public class SearchInInfiniteArray {
             return mid;
         }
         return -1;
+    }
+
+    @Override
+    public String getName() {
+        return "Search in infinite array";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Search in infinite array";
     }
 }

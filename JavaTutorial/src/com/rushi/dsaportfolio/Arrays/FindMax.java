@@ -1,7 +1,16 @@
 package com.rushi.dsaportfolio.Arrays;
 
-public class FindMax {
-    public static void main(String[] args) {
+import com.rushi.dsaportfolio.core.BaseProblem;
+
+import java.util.Scanner;
+
+public class FindMax extends BaseProblem {
+    public FindMax(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() {
         int[] arr = {1, 45, 67, 54, 33, 35};
         System.out.println(max(arr));
     }
@@ -14,5 +23,15 @@ public class FindMax {
             }
         }
         return max;
+    }
+
+    @Override
+    public String getName() {
+        return "Find max";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Find max in array";
     }
 }
