@@ -1,7 +1,16 @@
 package com.rushi.dsaportfolio.Searching.BinarySearch;
 
-public class OrderAgnoisticBinarySearch {
-    public static void main(String[] args) {
+import com.rushi.dsaportfolio.core.BaseProblem;
+
+import java.util.Scanner;
+
+public class OrderAgnoisticBinarySearch extends BaseProblem {
+    public OrderAgnoisticBinarySearch(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() {
         int[] ascArr = {2,4,6,9,23,45,54,63,78,99};
         int[] descArr = {99,86,78,65,58,47,32,29,12,7};
         int target = 99;
@@ -45,5 +54,15 @@ public class OrderAgnoisticBinarySearch {
             }
         }
         return -1;
+    }
+
+    @Override
+    public String getName() {
+        return "Order agnostic binary search";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Order agnostic binary search";
     }
 }

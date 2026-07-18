@@ -1,19 +1,22 @@
-package com.rushi.dsaportfolio.basics;
+package com.rushi.dsaportfolio.Searching;
 
+import com.rushi.dsaportfolio.Searching.BinarySearch.*;
 import com.rushi.dsaportfolio.core.DSAProblem;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class BasicsMain {
+public class SearchingMain {
     public static void executeAll(Scanner scanner) {
         List<DSAProblem> problems = new ArrayList<>();
-        problems.add(new Fibonacci(scanner));
-        problems.add(new ArmstrongNumbers(scanner));
-        problems.add(new FindOccurrences(scanner));
-        problems.add(new IsPrime(scanner));
-        problems.add(new ReverseNumber(scanner));
+        problems.add(new BinarySearch(scanner));
+        problems.add(new CeilingOfNumber(scanner));
+        problems.add(new FirstAndLastIndex(scanner));
+        problems.add(new OrderAgnoisticBinarySearch(scanner));
+        problems.add(new PeakInMountainArray(scanner));
+        problems.add(new SearchInInfiniteArray(scanner));
+        problems.add(new SmallestLetter(scanner));
 
         boolean exit = false;
         while(!exit) {

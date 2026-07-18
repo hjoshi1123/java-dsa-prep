@@ -1,4 +1,4 @@
-package com.rushi.dsaportfolio.basics;
+package com.rushi.dsaportfolio.Arrays;
 
 import com.rushi.dsaportfolio.core.DSAProblem;
 
@@ -6,14 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class BasicsMain {
+public class ArraysMain {
     public static void executeAll(Scanner scanner) {
         List<DSAProblem> problems = new ArrayList<>();
-        problems.add(new Fibonacci(scanner));
-        problems.add(new ArmstrongNumbers(scanner));
-        problems.add(new FindOccurrences(scanner));
-        problems.add(new IsPrime(scanner));
-        problems.add(new ReverseNumber(scanner));
+        problems.add(new FindMax(scanner));
+        problems.add(new ReverseArray(scanner));
 
         boolean exit = false;
         while(!exit) {

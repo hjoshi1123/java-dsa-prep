@@ -1,9 +1,17 @@
 package com.rushi.dsaportfolio.Arrays;
 
-import java.util.Arrays;
+import com.rushi.dsaportfolio.core.BaseProblem;
 
-public class ReverseArray {
-    public static void main(String[] args) {
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ReverseArray extends BaseProblem {
+    public ReverseArray(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() {
         int[] arr = {45, 66, 69, 32, 33, 2, 7, 49, 99};
         reverseArray(arr);
         System.out.println(Arrays.toString(arr));
@@ -23,5 +31,15 @@ public class ReverseArray {
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
+    }
+
+    @Override
+    public String getName() {
+        return "Reverse array";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Reverse an array";
     }
 }

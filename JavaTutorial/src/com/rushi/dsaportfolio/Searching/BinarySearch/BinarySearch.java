@@ -1,11 +1,19 @@
 package com.rushi.dsaportfolio.Searching.BinarySearch;
 
-public class BinarySearch {
-    public static void main(String[] args) {
+import com.rushi.dsaportfolio.core.BaseProblem;
+
+import java.util.Scanner;
+
+public class BinarySearch extends BaseProblem {
+    public BinarySearch(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() {
         int[] arr = {2,5,7,9,11,34,67,98};
         int target = 67;
         System.out.println(binarySearch(arr, target));
-
     }
 
     static int binarySearch(int[] arr, int target) {
@@ -22,5 +30,15 @@ public class BinarySearch {
             }
         }
         return -1;
+    }
+
+    @Override
+    public String getName() {
+        return "Binary search";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Binary search algorithm";
     }
 }

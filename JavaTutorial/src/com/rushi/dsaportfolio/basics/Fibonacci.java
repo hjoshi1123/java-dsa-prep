@@ -22,10 +22,10 @@ public class Fibonacci extends BaseProblem {
     @Override
     protected void executeLogic() {
         //Find nth fibonacci number
-        Scanner input = new Scanner(System.in);
+        System.out.println();
         System.out.println("Find nth fibonacci number.");
         System.out.println("Which fibonacci number do you want?");
-        int fibonacciInput = input.nextInt();
+        int fibonacciInput = scanner.nextInt();
         int a = 0;
         int b = 1;
         int count = 2;
@@ -35,6 +35,7 @@ public class Fibonacci extends BaseProblem {
             a = temp;
             count++;
         }
-        System.out.println(b);
+        System.out.println();
+        System.out.printf("The %dth fibonacci number is: %d", fibonacciInput, b);
     }
 }

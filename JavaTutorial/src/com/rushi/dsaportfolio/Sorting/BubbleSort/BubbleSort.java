@@ -1,13 +1,21 @@
 package com.rushi.dsaportfolio.Sorting.BubbleSort;
-import java.util.Arrays;
+import com.rushi.dsaportfolio.core.BaseProblem;
 
-public class BubbleSort {
-    public static void main(String[] args) {
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BubbleSort extends BaseProblem {
+    public BubbleSort(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() {
         int[] arr = {12,5,66,41,2,32,52,87,1,7};
         bubble(arr);
         System.out.println(Arrays.toString(arr));
     }
-    
+
     static void bubble(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 1; j < arr.length - i; j++) {
@@ -18,5 +26,15 @@ public class BubbleSort {
                 }
             }
         }
+    }
+
+    @Override
+    public String getName() {
+        return "Bubble sort";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Bubble sort algorithm";
     }
 }
