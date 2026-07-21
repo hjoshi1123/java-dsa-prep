@@ -32,10 +32,10 @@ public class BasicsMain {
                 } else if (choice == problems.size() + 1) {
                     exit = true;
                 } else {
-                    System.out.println("❌ Unknown menu item.");
+                    System.out.println("Unknown menu item.");
                 }
             } else {
-                System.out.println("❌ Digits only.");
+                System.out.println("Digits only.");
                 scanner.next();
             }
         }
