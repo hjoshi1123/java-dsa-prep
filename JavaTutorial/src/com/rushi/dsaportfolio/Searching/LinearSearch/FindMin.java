@@ -1,14 +1,20 @@
 package com.rushi.dsaportfolio.Searching.LinearSearch;
 
+import com.rushi.dsaportfolio.core.BaseProblem;
+
 import java.util.Scanner;
 
-public class FindMin {
-    public static void main(String[] args) {
+public class FindMin extends BaseProblem {
+    public FindMin(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() throws Exception {
         int[] arr = new int[10];
-        Scanner in = new Scanner(System.in);
         System.out.print("Enter array elements: ");
         for(int i = 0; i < arr.length; i++) {
-            arr[i] = in.nextInt();
+            arr[i] = scanner.nextInt();
         }
         System.out.println("The min number in array is: " + min(arr));
     }
@@ -21,5 +27,15 @@ public class FindMin {
             }
         }
         return min;
+    }
+
+    @Override
+    public String getName() {
+        return "Find minimum in array";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Find minimum number in array";
     }
 }

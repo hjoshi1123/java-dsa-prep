@@ -1,6 +1,7 @@
 package com.rushi.dsaportfolio.Searching;
 
 import com.rushi.dsaportfolio.Searching.BinarySearch.*;
+import com.rushi.dsaportfolio.Searching.LinearSearch.*;
 import com.rushi.dsaportfolio.core.DSAProblem;
 
 import java.util.ArrayList;
@@ -17,6 +18,11 @@ public class SearchingMain {
         problems.add(new PeakInMountainArray(scanner));
         problems.add(new SearchInInfiniteArray(scanner));
         problems.add(new SmallestLetter(scanner));
+        problems.add(new EvenDigits(scanner));
+        problems.add(new FindMin(scanner));
+        problems.add(new LinearSearch(scanner));
+        problems.add(new RichestCustomerWealth(scanner));
+        problems.add(new SearchIn2DArray(scanner));
 
         boolean exit = false;
         while(!exit) {
