@@ -11,6 +11,7 @@ public class ArraysMain {
         List<DSAProblem> problems = new ArrayList<>();
         problems.add(new FindMax(scanner));
         problems.add(new ReverseArray(scanner));
+        problems.add(new MoveZeros(scanner));
 
         boolean exit = false;
         while(!exit) {
