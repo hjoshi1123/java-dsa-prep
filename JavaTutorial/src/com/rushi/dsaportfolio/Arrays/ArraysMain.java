@@ -15,7 +15,7 @@ public class ArraysMain {
         boolean exit = false;
         while(!exit) {
             System.out.println();
-            System.out.println("DSA basics dashboard");
+            System.out.println("Arrays dashboard");
             for (int i = 0; i < problems.size(); i++) {
                 System.out.printf("%d. %s\n", (i + 1), problems.get(i).getName());
             }
@@ -29,10 +29,10 @@ public class ArraysMain {
                 } else if (choice == problems.size() + 1) {
                     exit = true;
                 } else {
-                    System.out.println("❌ Unknown menu item.");
+                    System.out.println("Unknown menu item.");
                 }
             } else {
-                System.out.println("❌ Digits only.");
+                System.out.println("Digits only.");
                 scanner.next();
             }
         }

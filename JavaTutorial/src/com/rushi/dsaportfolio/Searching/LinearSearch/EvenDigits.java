@@ -1,16 +1,22 @@
 package com.rushi.dsaportfolio.Searching.LinearSearch;
 
+import com.rushi.dsaportfolio.core.BaseProblem;
+
 import java.util.Scanner;
 
 //find-numbers-with-even-number-of-digits (leetcode)
-public class EvenDigits {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+public class EvenDigits extends BaseProblem {
+    public EvenDigits(Scanner scanner) {
+        super(scanner);
+    }
+
+    @Override
+    protected void executeLogic() throws Exception {
         int count = 0;
         int[] nums = new int[5];
         System.out.print("Enter 5 numbers : ");
         for(int i = 0; i < nums.length; i++) {
-            nums[i] = in.nextInt();
+            nums[i] = scanner.nextInt();
         }
         for(int num : nums) {
             if(even(num)) {
@@ -38,4 +44,13 @@ public class EvenDigits {
         return ((int)(Math.log10(num)) + 1) % 2 == 0;
     }
 
+    @Override
+    public String getName() {
+        return "Even Digits";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Find numbers with even number of digits.";
+    }
 }

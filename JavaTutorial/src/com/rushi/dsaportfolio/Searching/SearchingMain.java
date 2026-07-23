@@ -1,6 +1,7 @@
 package com.rushi.dsaportfolio.Searching;
 
 import com.rushi.dsaportfolio.Searching.BinarySearch.*;
+import com.rushi.dsaportfolio.Searching.LinearSearch.*;
 import com.rushi.dsaportfolio.core.DSAProblem;
 
 import java.util.ArrayList;
@@ -17,11 +18,16 @@ public class SearchingMain {
         problems.add(new PeakInMountainArray(scanner));
         problems.add(new SearchInInfiniteArray(scanner));
         problems.add(new SmallestLetter(scanner));
+        problems.add(new EvenDigits(scanner));
+        problems.add(new FindMin(scanner));
+        problems.add(new LinearSearch(scanner));
+        problems.add(new RichestCustomerWealth(scanner));
+        problems.add(new SearchIn2DArray(scanner));
 
         boolean exit = false;
         while(!exit) {
             System.out.println();
-            System.out.println("DSA basics dashboard");
+            System.out.println("Searching dashboard");
             for (int i = 0; i < problems.size(); i++) {
                 System.out.printf("%d. %s\n", (i + 1), problems.get(i).getName());
             }
@@ -35,10 +41,10 @@ public class SearchingMain {
                 } else if (choice == problems.size() + 1) {
                     exit = true;
                 } else {
-                    System.out.println("❌ Unknown menu item.");
+                    System.out.println("Unknown menu item.");
                 }
             } else {
-                System.out.println("❌ Digits only.");
+                System.out.println("Digits only.");
                 scanner.next();
             }
         }
